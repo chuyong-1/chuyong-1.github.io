@@ -230,7 +230,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header class="hero" id="top">
   <canvas id="swarm" aria-hidden="true"></canvas>
   <div class="wrap">
-    <div class="pill rv"><b></b>Building AXON at Banao · AI SWE intern at FreighAI</div>
+    <div class="pill rv"><b></b>AI Software Engineer intern at FreighAI</div>
     <h1 class="rv d1">I build multi-agent systems that are <span class="red">safe to ship.</span></h1>
     <p class="lede rv d2">I'm <strong>Kwok Wai Taifa</strong> (Chuyong), an AI engineer from Jaipur. My rule: <strong>the model proposes, deterministic code decides.</strong> Off the keyboard, I box.</p>
     <div class="who rv d3" id="who" aria-live="polite"></div>
@@ -253,9 +253,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <section id="about">
   <div class="wrap">
     <div class="stats rv">
-      <div class="stat"><div class="n"><span data-count="2">0</span></div><p>AI engineering internships, running in parallel</p></div>
+      <div class="stat"><div class="n"><span data-count="2">0</span></div><p>AI engineering internships</p></div>
       <div class="stat"><div class="n"><span data-count="10">0</span><sup>+</sup></div><p>AI projects shipped on GitHub</p></div>
-      <div class="stat"><div class="n"><span data-count="5">0</span></div><p>agents in the AXON swarm I build on</p></div>
+      <div class="stat"><div class="n"><span data-count="5">0</span></div><p>agents in the AXON swarm I built on</p></div>
       <div class="stat"><div class="n"><span data-count="200">0</span><sup>+</sup></div><p>students in the martial arts club I founded</p></div>
     </div>
 
@@ -273,7 +273,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="tile t-now rv d1">
         <div class="eyebrow">Now</div>
         <div class="role"><h4>FreighAI</h4><p>AI Software Engineer Intern</p></div>
-        <div class="role"><h4>Banao Technologies</h4><p>AI Developer Intern on AXON · since Jan 2026</p></div>
+        <div class="role"><h4>Banao Technologies</h4><p>Previously · AI Developer Intern on AXON · Jan–Oct 2026</p></div>
       </div>
       <div class="tile t-third rv">
         <div class="eyebrow">Focus</div>
@@ -326,12 +326,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p>Engineering AI systems as part of the FreighAI team.</p>
       </div>
       <div class="ev rv">
-        <div class="when">JAN 2026 — NOW</div>
-        <h3>AI Developer Intern <span>· Banao Technologies, Jaipur</span><span class="now-badge">ACTIVE</span></h3>
-        <p>Working on AXON, a multi-agent meeting intelligence and workforce orchestration platform (IRIS, NERVE, CELL, CORTEX, STROMA).</p>
+        <div class="when">JAN 2026 — OCT 2026</div>
+        <h3>AI Developer Intern <span>· Banao Technologies, Jaipur</span></h3>
+        <p>Worked on AXON, a multi-agent meeting intelligence and workforce orchestration platform (IRIS, NERVE, CELL, CORTEX, STROMA).</p>
         <ul>
-          <li>Own the data pipelines and ingestion layer</li>
-          <li>Own NERVE, the event bus and scheduler that the other agents run on</li>
+          <li>Owned the data pipelines and ingestion layer</li>
+          <li>Owned NERVE, the event bus and scheduler that the other agents ran on</li>
         </ul>
       </div>
       <div class="ev rv">
@@ -424,7 +424,7 @@ document.getElementById("track").innerHTML=[...all,...all].map(t=>`<span>${esc(t
 document.getElementById("yr").textContent=new Date().getFullYear();
 
 /* typing line */
-const lines=["> ai_engineer --mode=multi-agent","> intern @ FreighAI && Banao/AXON","> owns: pipelines · ingestion · NERVE","> also: district boxing gold"];
+const lines=["> ai_engineer --mode=multi-agent","> intern @ FreighAI","> prev: Banao / AXON · NERVE event bus","> also: district boxing gold"];
 const who=document.getElementById("who");let li=0,ci=0,del=false;
 function type(){const l=lines[li];who.innerHTML=esc(l.slice(0,ci))+'<span class="caret"></span>';
  if(!del&&ci<l.length){ci++;setTimeout(type,45)}else if(!del){del=true;setTimeout(type,1800)}
