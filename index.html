@@ -1320,7 +1320,8 @@ const ARCH={
   sum.innerHTML=`<b>${own.length}</b> public repos · <b>${stars}</b>★ · last push <b>${own[0]?rel(own[0].pushed_at):"—"}</b>`;
   grid.innerHTML=own.slice(0,6).map(r=>`<a class="repo" href="${r.html_url}" target="_blank" rel="noopener"><h5>${esc(r.name)}</h5><p>${esc(r.description||"No description yet.")}</p>
    <div class="meta">${r.language?`<span><i style="background:${LC[r.language]||"#888"}"></i>${esc(r.language)}</span>`:""}<span>★ ${r.stargazers_count}</span><span>${rel(r.pushed_at)}</span></div></a>`).join("")}
- function fail(){sum.textContent="GitHub is rate-limiting right now";grid.innerHTML=`<a class="repo" href="https://github.com/chuyong-1?tab=repositories" target="_blank" rel="noopener"><h5>See all repos on GitHub →</h5><p>Live data couldn't load, but everything is on my profile.</p><div class="meta"><span>github.com/chuyong-1</span></div></a>`}
+ function fail(){sum.innerHTML=`live feed paused (GitHub rate limit) · <a href="https://github.com/chuyong-1?tab=repositories" target="_blank" rel="noopener" style="color:var(--text)">all repos →</a>`;
+  grid.innerHTML=PROJECTS.map(p=>`<a class="repo" href="${p.url}" target="_blank" rel="noopener"><h5>${esc(p.url.split("/").pop())}</h5><p>${esc(p.desc)}</p><div class="meta"><span><i style="background:${p.blue?"#1ea7ff":"#ff1e1e"}"></i>${esc(p.tag.toLowerCase())}</span><span>featured</span></div></a>`).join("")}
  let cached=null;try{const c=JSON.parse(sessionStorage.getItem("kwt-gh")||"null");if(c&&Date.now()-c.t<6e5)cached=c.d}catch(e){}
  if(cached){render(cached);return}
  const io=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;io.disconnect();
